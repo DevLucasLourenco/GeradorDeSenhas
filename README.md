@@ -26,3 +26,14 @@ como pode ver, existe uma ```def function``` que criei para adaptar caso o núme
 Logo, sempre que o ```start``` for pressionado, haverá uma checagem. Após ela ser feita, caso ja exista o arquivo, ele abrirá, copiará os dados que já contém nele, e passará juntamente à nova informação que irá entrar, sendo assism, impossível de perder as senhas geradas anteriormente.
 
 
+# Cx-Freeze
+
+Para tornar esse programa possível de ser compartilhado para outras pessoas que não tenham o python instalado, o tornei um programa executável.
+
+
+para fazer isso, utilizei o ```cx_freeze```, uma ferramente com enorme utilidade para esta ocasião.
+
+Criei um arquivo chamado ```setup.py``` para fazer com que esta ferramenta funcione. 
+
+
+Após ter feito isso, abri o terminal e utilizei o comando ```python .\setup.py build```, dando assim, então, o início à criação do executável.
