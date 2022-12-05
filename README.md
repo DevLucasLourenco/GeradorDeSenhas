@@ -37,3 +37,8 @@ Criei um arquivo chamado ```setup.py``` para fazer com que esta ferramenta funci
 
 
 Após ter feito isso, abri o terminal e utilizei o comando ```python .\setup.py build```, dando assim, então, o início à criação do executável.
+
+
+
+## Atenção
+Nos arquivos desse repositório, deixei um ```.rar``` deste executável, mas não é necessário baixá-lo. Afinal, basta seguir os passos acima tendo baixado tanto o ```main.py``` quanto o ```setup.py``` e colocado-os na mesma pasta.
