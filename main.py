@@ -23,9 +23,10 @@ def hora_setup():
 
 
 def main():
-    
+        
     senha = ''.join(random.sample(senha_complementos, tamanho))
     texto  = f'{senha} - {hora_setup()}\n'
+    lista_auxiliar.append(senha)
     
     try:            
         ########### with read
@@ -58,7 +59,8 @@ def last():
         texto_file = file.read()        
         last_password = texto_file.split('\n')
         last_password = last_password[-2]
-        messagebox.showinfo('Ultima Senha',last_password)
+    
+    messagebox.showinfo('Ultima Senha',last_password)
 
 
 def inf():
@@ -66,6 +68,18 @@ def inf():
     Made by Lucas Lourenço
     '''
     messagebox.showinfo('Atenção',help)
+
+
+def all_in():
+    
+    texto_lista_auxiliar = lambda a, b: f'{a+1}º Senha = {b}'   
+    lista_auxiliar_all_in = [texto_lista_auxiliar(i, each) for i, each in enumerate(lista_auxiliar)]
+    
+    if len(lista_auxiliar_all_in) <= 1:
+        messagebox.showinfo('Senha Gerada Agora', '\n'.join(lista_auxiliar_all_in))
+        
+    else:
+        messagebox.showinfo('Senhas Geradas Agora', '\n'.join(lista_auxiliar_all_in))
 
 
 
@@ -77,7 +91,8 @@ simb = '!@#$&'
 tamanho = 12
 senha_complementos = l_mi + l_ma + numeros + simb
 
-
+############# lista auxiliar
+lista_auxiliar = []
 
 
 ######## TKinter
@@ -99,6 +114,11 @@ Button(master,
 Button(master, 
        text='Última senha', 
        command=last).place(x=140,y=150)
+
+
+Button(master, 
+       text='Senha(s) Gerada(s) Agora', 
+       command=all_in).place(x=120,y=180)
 
 
 mainloop()
